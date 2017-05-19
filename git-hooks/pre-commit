@@ -1,0 +1,17 @@
+#!/bin/bash
+
+npm run lint
+
+if [ $? -ne 0 ]; then
+  echo 'Linting failed'
+  echo 'Commit Aborted'
+  exit 1
+fi
+
+npm run style
+
+if [ $? -ne 0 ]; then
+  echo 'Style check failed'
+  echo 'Commit Aborted'
+  exit 1
+fi

@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "furigana-toggle",
+  "version": "1.1.1",
+  "description": "Chrome extension for toggling furigana on and off.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "jshint *.js",
+    "style": "jscs *.js --preset=google"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://DarrenLester@bitbucket.org/DarrenLester/furigana-toggle.git"
+  },
+  "author": "Darren Lester <dsslester@gmail.com> (http://www.darrenlester.com)",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/DarrenLester/furigana-toggle#readme",
+  "devDependencies": {
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.4"
+  }
+}

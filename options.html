@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="options.css">
+</head>
+
+<body>
+  <ul>
+    <li>
+      <label>
+        <input id="hover-reveal-checkbox" type="checkbox" /> reveal furigana on hover
+      </label>
+    </li>
+    <li>
+      <label>
+        <input id="colour-checkbox" type="checkbox" /> kanji/furigana colour
+      </label>
+    </li>
+    <li class="colour-option">
+      <label>
+        <input id="kanji-colour" type="color" value="#0000ff"/> kanji colour
+      </label>
+    </li>
+    <li class="colour-option">
+      <label>
+        <input id="furigana-colour" type="color" value="#ff0000"/> furigana colour
+      </label>
+    </li>
+  </ul>
+  
+  <button id="save">Save</button>
+  <span id="notification"></span>
+
+  <script src="options.js"></script>
+</body>
+
+</html>
