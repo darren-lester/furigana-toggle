@@ -9,15 +9,18 @@
     "lint": "jshint *.js",
     "style": "jscs *.js --preset=google"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://DarrenLester@bitbucket.org/DarrenLester/furigana-toggle.git"
-  },
   "author": "Darren Lester <dsslester@gmail.com> (http://www.darrenlester.com)",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/DarrenLester/furigana-toggle#readme",
   "devDependencies": {
     "jscs": "^3.0.7",
     "jshint": "^2.9.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darren-lester/furigana-toggle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/darren-lester/furigana-toggle/issues"
+  },
+  "homepage": "https://github.com/darren-lester/furigana-toggle#readme"
 }
