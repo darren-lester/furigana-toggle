@@ -37,11 +37,11 @@ function setBadgeText() {
 }
 
 function applyStylesheetToAllTabs() {
-  chrome.tabs.getAllInWindow(null, function(tabs) {
+  chrome.tabs.query({currentWindow: true}, function(tabs) {
     tabs.forEach(function(tab) {
       applyStylesheetToTab(tab.id);
     });
-  });
+  });  
 }
 
 function applyStylesheetToTab(id) {

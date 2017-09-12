@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Furigana Toggle",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "Toggle furigana on and off.",
   "author": "Darren Lester",
 
@@ -26,11 +26,23 @@
   },
 
   "browser_action": {
-    "default_title": "Furigana Toggle"
+    "default_title": "Furigana Toggle",
+    "default_icon": {
+      "16": "logo_16.png",
+      "48": "logo_48.png",
+      "128": "logo_128.png"
+    }
   },
 
   "options_ui": {
     "page": "options.html",
     "chrome_style": true
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "furiganatoggle@darrenlester.com",
+      "strict_min_version": "53.0"
+    }
   }
 }
