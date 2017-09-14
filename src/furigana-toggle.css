@@ -16,7 +16,7 @@
   color: var(--furigana-colour) !important;
 }
 
-.furigana-toggle-colour ruby {
+.furigana-toggle-colour ruby, .furigana-toggle-colour rb {
   color: blue !important;
   color: var(--kanji-colour) !important;
 }
