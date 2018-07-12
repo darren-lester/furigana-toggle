@@ -33,7 +33,9 @@ chrome.browserAction.onClicked.addListener(function() {
 function setBadgeText() {
   chrome.storage.sync.set({'furiganaOff': on});
   const badgeText = on ? 'ON' : '';
-  chrome.browserAction.setBadgeText({text: badgeText});
+  if (chrome.browserAction.setBadgeText) {
+    chrome.browserAction.setBadgeText({text: badgeText});
+  }
 }
 
 function applyStylesheetToAllTabs() {

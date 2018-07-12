@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Furigana Toggle",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Toggle furigana on and off.",
   "author": "Darren Lester",
 
