@@ -7,10 +7,12 @@ chrome.storage.sync.set({
 setBadgeText();
 
 chrome.tabs.onActivated.addListener(function(activeInfo) {
+  setPopup();
   applyStylesheetToTab(activeInfo.tabId);
 });
 
 chrome.tabs.onUpdated.addListener(function(activeInfo) {
+  setPopup();
   applyStylesheetToTab(activeInfo.tabId);
 });
 
@@ -27,6 +29,8 @@ chrome.browserAction.onClicked.addListener(function() {
 
   if (on) {
     applyStylesheetToTab(undefined);
+  } else {
+    setPopup();
   }
 });
 
@@ -36,6 +40,22 @@ function setBadgeText() {
   if (chrome.browserAction.setBadgeText) {
     chrome.browserAction.setBadgeText({text: badgeText});
   }
+}
+
+function setPopup() {
+  if (on) {
+    chrome.browserAction.setPopup({popup: ''});
+    return;
+  }
+  
+  chrome.tabs.executeScript(undefined, {
+    file: 'has-ruby.js'
+  }, function(results) { 
+    const hasRuby = results[0];
+    chrome.browserAction.setPopup({
+      popup: hasRuby ? '' : 'popup/no-ruby-popup.html'
+    });
+  });
 }
 
 function applyStylesheetToAllTabs() {
