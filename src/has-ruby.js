@@ -1,1 +1,0 @@
-Boolean(document.querySelector('ruby'));

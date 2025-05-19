@@ -34,7 +34,7 @@ function addStyle() {
 
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = chrome.extension.getURL('furigana-toggle.css');
+  stylesheet.href = chrome.runtime.getURL('furigana-toggle.css');
   stylesheet.id = 'furigana-toggle-css';
   document.head.appendChild(stylesheet);
 }
@@ -53,3 +53,12 @@ function removeStyle() {
   document.body.classList.remove('furigana-toggle-hover');
   document.body.classList.remove('furigana-toggle-colour');
 }
+
+chrome.runtime.onMessage.addListener(
+  function(request, _sender, sendResponse) {
+    if (request.action === "CHECK_HAS_RUBY") {
+      const hasRuby = Boolean(document.querySelector('ruby'));
+      sendResponse(hasRuby);
+    }
+  }
+);
